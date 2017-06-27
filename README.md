@@ -8,8 +8,8 @@
 ![](https://ooo.0o0.ooo/2017/06/27/59523baf8bdd5.gif)
 ---
 ## 使用方法如下：
-1. 首先引入jquery，然后引入本插件
-2. body中插入以下代码
+**1. 首先引入jquery，然后引入本插件**
+**2. body中插入以下代码**
 ```
 <div id="slider">
     <div id="slider_bg"></div>
@@ -17,7 +17,7 @@
     <span id="labelTip">往右拖动验证</span>
 </div>
 ```
-3. style中插入以下代码
+**3. style中插入以下代码**
 ```
 /*滑块*/
 
@@ -61,7 +61,7 @@
     }
 ```
 
-4. js中调用插件方法
+**4. js中调用插件方法**
 ```
 $(document).ready(function(){
   this.slider = new SliderUnlock("#slider",{
