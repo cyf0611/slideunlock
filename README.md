@@ -2,6 +2,7 @@
 > 本插件在slideunlock的基础上，修复了抖动，灵敏度等问题，使用方法和slideunlock一样
 ---
 ## 效果如下：
+下图是一个gif，加载速度比较慢
 ![](https://ooo.0o0.ooo/2017/06/27/59523baf8bdd5.gif)
 ---
 ## 使用方法如下：
@@ -64,8 +65,8 @@ $(document).ready(function(){
   this.slider = new SliderUnlock("#slider",{
       successLabelTip : "验证通过"
   },function(){
-      _this.test = true;
-  });
+      //此处是验证成功之后执行的代码
+  });
   this.slider.init();
 });
 
