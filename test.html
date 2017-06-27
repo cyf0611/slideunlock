@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        /*滑块*/
+
+        #slider {
+            width: 300px;
+            height: 36px;
+            position: relative;
+            text-align: center;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            border-radius: 18px;
+            background-color: #666;
+        }
+
+        #slider_bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #dbf2ed;
+            z-index: 1;
+        }
+
+        #label {
+            width: 50px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 3;
+            cursor: pointer;
+            height: 36px;
+            width: 50px;
+            border-radius: 18px;
+            background-color: #4db4f2;
+        }
+
+        #labelTip {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            font-size: 14px;
+            color: #fff;
+            line-height: 36px;
+            text-align: center;
+            z-index: 2;
+        }
+    </style>
+
+    <script src="./jquery.js"></script>
+    <script src='./jquery.slideunlock.js'></script>
+</head>
+
+<body>
+<div id="slider">
+    <div id="slider_bg"></div>
+    <span id="label" class='slider'></span>
+    <span id="labelTip">往右拖动验证</span>
+</div>
+
+<script>
+	//JS初始化
+	$(function () {
+		var slider = new SliderUnlock("#slider",{
+			successLabelTip : "验证通过"
+		},function(){
+			//此处是验证成功之后执行的代码
+		});
+		slider.init();
+	});
+
+
+
+</script>
+
+</body>
+</html>

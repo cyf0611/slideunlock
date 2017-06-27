@@ -48,6 +48,10 @@
         top: 0;
         z-index: 3;
         cursor: pointer;
+        height: 36px;
+        width: 50px;
+        border-radius: 18px;
+        background-color: #4db4f2;
     }
 
     #labelTip {
@@ -64,13 +68,13 @@
 
 **4. js中调用插件方法**
 ```
-$(document).ready(function(){
-  this.slider = new SliderUnlock("#slider",{
-      successLabelTip : "验证通过"
-  },function(){
-      //此处是验证成功之后执行的代码
-  });
-  this.slider.init();
+$(function () {
+    var slider = new SliderUnlock("#slider",{
+        successLabelTip : "验证通过"
+    },function(){
+        //此处是验证成功之后执行的代码
+    });
+    slider.init();
 });
 
 ```
