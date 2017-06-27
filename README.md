@@ -2,7 +2,7 @@
 > 本插件在slideunlock的基础上，修复了抖动，灵敏度等问题，使用方法和slideunlock一样
 ---
 ## 效果如下：
-![img]https://ooo.0o0.ooo/2017/06/27/59523baf8bdd5.gif[/img]
+![](https://ooo.0o0.ooo/2017/06/27/59523baf8bdd5.gif)
 ---
 ## 使用方法如下：
 1. 首先引入jquery，然后引入本插件
