@@ -48,8 +48,11 @@
 
 	SliderUnlock.prototype.init = function () {
 		var me = this;
-
+		me.elm.unbind('mousedown');
+		$(document).unbind('mousemove');
+		$(document).unbind('mouseup');
 		me.updateView();
+
 		me.elm.find("#label").on("mousedown", function (event) {
 			me.cao = true;
 			var e = event || window.event;
@@ -58,14 +61,13 @@
 		})
 
 		$(document).on("mousemove", function (event) {
-			me.handerMove(event);
 			if(me.cao){
-
+				me.handerMove(event);
 			}
 
 		}).on("mouseup", function (event) {
-			me.cao = false;
 			me.handerOut();
+			me.cao = false;
 		});
 	};
 
@@ -87,7 +89,7 @@
 		//停止
 		me.swipestart = false;
 		me.move();
-		if (me.index < me.max) {
+		if (me.cao && me.index < me.max) {
 			me.reset();
 		}
 	};
